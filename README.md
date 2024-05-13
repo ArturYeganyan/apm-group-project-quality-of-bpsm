@@ -16,7 +16,7 @@ This repository forms part of an advanced course on process mining at the Univer
 
 The simulated logs folder is divided into two parts due to GitHub's file size limits. Depending on which datasets are required, please access either the first or the second folder accordingly.
 
-#### Usage Instructions
+### Usage Instructions
 
 To calculate all distance measures as per the paper's methods, execute:
 
