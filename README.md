@@ -1,15 +1,28 @@
-Datasets and files used in the evaluation of the paper "Can I Trust My Simulation Model? Measuring the Quality of Business Process Simulation Models", where:
+# Advanced Process Mining Team Project
+## University of Mannheim
+
+This repository forms part of an advanced course on process mining at the University of Mannheim, focusing on replicating the findings of the paper "Can I Trust My Simulation Model? Measuring the Quality of Business Process Simulation Models".
+
+### Repository Overview
+
 - `BPS-models/`: folder containing the BPS models used in the evaluation (the BPS models discovered by ServiceMiner are not included due to privacy reasons).
   - The BPS models discovered by SIMOD are composed of _i)_ a BPMN file with the process model structure, and _ii)_ a JSON file with the parameters of the simulation. These files correspond to the format of Prosimos simulation engine (https://prosimos.cloud.ut.ee/).
   - The BPS models of the Loan Application process are composed of a BPMN file with both the process model structure and parameters, corresponding to the format of the BIMP simulator used in APROMORE (https://apromore.com/).
 - `measures/`: folder containing the distance values of each measure reported in the paper.
 - `original-event-logs/`: folder containing the (train and test) event logs used in the evaluation.
-- `simulated-logs/`: folder containing the simulated logs evaluated in the paper (synthetic, SIMOD, and ServiceMiner).
 - `ComputeLogDistance.py`: script to compute the distance measures proposed in the paper.
+- `simulated-logs/`: first folder containing the simulated logs evaluated in the paper (synthetic, SIMOD, and ServiceMiner).
+- `simulated-logs-2/`: second folder containing the simulated logs evaluated in the paper (synthetic, SIMOD, and ServiceMiner).
 
-`ComputeLogDistance.py` example of use:
+The simulated logs folder is divided into two parts due to GitHub's file size limits. Depending on which datasets are required, please access either the first or the second folder accordingly.
 
-Run `python ComputeLogDistance.py -cfld test_event_log.csv.gz simulated_logs/` to compute all distance measures proposed in the publication.
+#### Usage Instructions
+
+To calculate all distance measures as per the paper's methods, execute:
+
+```bash
+python ComputeLogDistance.py -cfld test_event_log.csv.gz simulated-logs/
+```
 
 The flag `-cfld` is optional, due to the high computational complexity of the CFLD measure.
 
