@@ -61,9 +61,9 @@ EventLogIDs(
 
 Simod uses process mining and machine learning to automatically create and optimize Business Process Simulation models from event logs taken from enterprise systems like ERPs and CRMs. It takes a CSV event log, a configuration file, and optionally a BPMN model, then generates a simulation scenario that can be run with the embedded Prosimos simulator. After installing SIMOD, you can execute the configuration file.
 
-In this configuration file, you need to specify the relevant paths to the event log in CSV format `train_log_path` and to the process model `process_model_path`. Both the event log and the process model need to be in their original zipped format. Afterwards you can execute the following command:
+In this configuration file, you need to specify the relevant paths to the event log in CSV format `train_log_path`. Paths are relative to the configuration file, or absolute. Afterwards you can execute the following command:
 
 ```python
-simod --configuration configuration_example_with_provided_process_model.yml
+simod --configuration resources/config/configuration_example.yml
 ```
 
